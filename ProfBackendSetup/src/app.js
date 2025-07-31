@@ -16,4 +16,9 @@ app.use(express.static("public")) //it is used to keep the req data,img etc in o
 app.use(cookieParser()) //it is used access the client's cookies and set it according to the needs
 
 
+import userRouter from './routes/user.routes.js';  // importing the user routes
+
+app.use ("/api/v1/users",userRouter)
+
+
 export { app };
